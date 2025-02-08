@@ -330,7 +330,28 @@ body {
   .card img {
     width: 100%;
     height: 100%;
-    object-fit: fill; /* Stretches image */
+    object-fit: fill;
     border-radius: 8px;
   }  
+  
+  .breakout-game {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  canvas {
+    background: #f4f4f4;
+    border: 2px solid #333;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
   

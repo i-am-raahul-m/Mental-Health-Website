@@ -9,6 +9,7 @@ import Sleep from './components/Sleep';
 import Therapy from './components/Therapy';
 import SelfCare from './components/SelfCare';
 import MemoryMatch from './components/MemoryMatch';
+import Breakout from "./components/Breakout";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/selfcare" element={<SelfCare />} />
             <Route path="/" element={<SelfCare />} />
             <Route path="/memory-match" element={<MemoryMatch />} />
+            <Route path="/breakout" element={<Breakout />} />
           </Routes>
         </div>
       </div>

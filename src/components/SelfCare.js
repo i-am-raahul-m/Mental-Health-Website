@@ -10,7 +10,7 @@ function SelfCare() {
         <h3>Try These Stress-Relief Mini-Games</h3>
         <ul>
           <li><Link to="/bubble-wrap-pop">Bubble Wrap Pop</Link></li>
-          <li><Link to="/zen-garden">Zen Garden Builder</Link></li>
+          <li><Link to="/breakout">Atari Breakout</Link></li>
           <li><Link to="/memory-match">Memory Match</Link></li>
         </ul>
       </div>
