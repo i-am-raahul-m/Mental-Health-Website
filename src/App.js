@@ -8,6 +8,7 @@ import GuidedMeditation from './components/GuidedMeditation';
 import Sleep from './components/Sleep';
 import Therapy from './components/Therapy';
 import SelfCare from './components/SelfCare';
+import MemoryMatch from './components/MemoryMatch';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
             <Route path="/sleep" element={<Sleep />} />
             <Route path="/therapy" element={<Therapy />} />
             <Route path="/selfcare" element={<SelfCare />} />
+            <Route path="/" element={<SelfCare />} />
+            <Route path="/memory-match" element={<MemoryMatch />} />
           </Routes>
         </div>
       </div>

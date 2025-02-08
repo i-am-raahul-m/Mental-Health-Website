@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function SelfCare() {
-  const [score, setScore] = useState(0);
-
-  const handlePlayGame = () => {
-    // Dummy game logic: Increase the score by a random value.
-    setScore(score + Math.floor(Math.random() * 10) + 1);
-  };
-
   return (
     <div className="self-care">
       <h2>Self-Care & Relationship</h2>
-      <div className="minigame">
-        <h3>Stress Relief Mini-Game</h3>
-        <p>Click the button to release stress!</p>
-        <button onClick={handlePlayGame}>Release Stress</button>
-        <p>Your relaxation score: {score}</p>
+
+      <div className="minigames">
+        <h3>Try These Stress-Relief Mini-Games</h3>
+        <ul>
+          <li><Link to="/bubble-wrap-pop">Bubble Wrap Pop</Link></li>
+          <li><Link to="/zen-garden">Zen Garden Builder</Link></li>
+          <li><Link to="/memory-match">Memory Match</Link></li>
+        </ul>
       </div>
+
       <div className="self-care-tips">
         <h3>Self-Care Tips</h3>
         <ul>
