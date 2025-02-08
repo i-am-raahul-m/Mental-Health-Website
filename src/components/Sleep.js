@@ -2,13 +2,13 @@ import React from 'react';
 
 function Sleep() {
   const sleepAids = [
-    { title: 'White Noise', src: 'White-Noise-60min.mp3' },
+    { title: 'White Noise', src: '/sleep/White-Noise-60min.mp3' },
     { 
       title: 'Binaural Beats', 
       src: [
-        'sleep1.mp3',
-        'sleep2.mp3',
-        'sleep3.mp3'
+        '/sleep/sleep1.mp3',
+        '/sleep/sleep2.mp3',
+        '/sleep/sleep3.mp3'
       ] 
     }
   ];

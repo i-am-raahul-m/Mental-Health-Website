@@ -7,17 +7,17 @@ function Music() {
   // Dummy playlists for demonstration purposes
   const playlists = {
     Classical: [
-      { title: 'Keys of Moon', src: 'keys-of-moon.mp3' },
-      { title: 'Make a Wish', src: 'make-a-wish.mp3' }
+      { title: 'Keys of Moon', src: '/music/keys-of-moon.mp3' },
+      { title: 'Make a Wish', src: '/music/make-a-wish.mp3' }
     ],
     Lofi: [
-      { title: 'Downtown Glow', src: 'downtown-glow.mp3' },
-      { title: 'Storm Clouds', src: 'storm-clouds.mp3' }
+      { title: 'Downtown Glow', src: '/music/downtown-glow.mp3' },
+      { title: 'Storm Clouds', src: '/music/storm-clouds.mp3' }
     ],
-    Ambient: [{ title: 'Contemplate the Stars', src: 'contemplate-the-stars.mp3' }],
+    Ambient: [{ title: 'Contemplate the Stars', src: '/music/contemplate-the-stars.mp3' }],
     Nature: [
-      { title: 'Forest Chirpings', src: 'forest-chirpings.mp3' },
-      { title: 'Soft Rain', src: 'rain.mp3' }
+      { title: 'Forest Chirpings', src: '/music/forest-chirpings.mp3' },
+      { title: 'Soft Rain', src: '/music/rain.mp3' }
     ]
   };
 
