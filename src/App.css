@@ -354,4 +354,169 @@ body {
     font-size: 16px;
     cursor: pointer;
   }
+  .self-care {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
   
+  .self-care h2 {
+    color: #333;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .self-care h3 {
+    color: #4a90e2;
+    margin-top: 20px;
+  }
+  
+  .minigame {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .minigame button,
+  .gratitude-game button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .minigame button:hover,
+  .gratitude-game button:hover {
+    background-color: #357abd;
+  }
+  
+  .game-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .stress-relief,
+  .gratitude-game {
+    flex: 1;
+    min-width: 0; /* This ensures that the flex items can shrink below their minimum content size */
+  }
+  
+  @media (max-width: 768px) {
+    .game-container {
+      flex-direction: column;
+    }
+  }
+  .article-card {
+    border: 1px solid #ccc; /* Adds a subtle border */
+    border-radius: 12px;    /* Rounded corners for a softer look */
+    padding: 20px;          /* Space inside the card */
+    margin: 15px 0;         /* Space between cards */
+    text-align: left;      
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Adds space between cards */
+  }
+  
+  .read-more {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  .gratitude-game {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.gratitude-textbox {
+    width: 90%;
+    height: 80px;
+    margin-top: 10px;
+    padding: 8px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+}
+.self-care-tips {
+  background-color: #f0f8ff;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 8px;
+  width: 60%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.self-care-tips h3 {
+  color: #007bff;
+  font-size: 20px;
+}
+
+.self-care-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.self-care-tips li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.self-care-tips li:hover {
+  transform: scale(1.05);
+  background-color: #e6f7ff;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.gratitude-submit {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.gratitude-submit:hover {
+  background-color: #218838;
+}

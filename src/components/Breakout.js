@@ -160,7 +160,7 @@ const Breakout = () => {
       // Increase the ball speed linearly by applying a constant acceleration.
       const currentSpeed = Math.sqrt(dx * dx + dy * dy);
       const angle = Math.atan2(dy, dx);
-      const acceleration = 0.005; // Adjust this value for desired acceleration
+      const acceleration = 0.001; // Adjust this value for desired acceleration
       const newSpeed = currentSpeed + acceleration;
       dx = newSpeed * Math.cos(angle);
       dy = newSpeed * Math.sin(angle);
