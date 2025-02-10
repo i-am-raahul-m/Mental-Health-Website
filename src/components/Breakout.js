@@ -2,13 +2,10 @@ import React, { useRef, useEffect, useState } from "react";
 
 const Breakout = () => {
   const canvasRef = useRef(null);
-  // Track game-over and win state
   const [gameOver, setGameOver] = useState(false);
   const [win, setWin] = useState(false);
-  // This state is used solely to trigger a re-run of the useEffect (i.e., to restart the game)
   const [restartKey, setRestartKey] = useState(0);
 
-  // Function to restart the game
   const handleRestart = () => {
     setGameOver(false);
     setWin(false);
@@ -19,7 +16,7 @@ const Breakout = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
-    let gameWon = false; // Local variable to track if the game has been won
+    let gameWon = false;
 
     // Game Constants
     const paddleHeight = 10;
@@ -192,7 +189,7 @@ const Breakout = () => {
     document.addEventListener("keydown", keyDownHandler);
     document.addEventListener("keyup", keyUpHandler);
 
-    // Start the game loop
+    // Game loop
     draw();
 
     // Cleanup event listeners on unmount or restart
@@ -205,12 +202,9 @@ const Breakout = () => {
   return (
     <div className="breakout-game">
       <h2>Atari Breakout</h2>
-      {/* Enlarged canvas */}
       <canvas ref={canvasRef} width="570" height="600"></canvas>
-      {/* Display lose or win message */}
       {gameOver && <p> Game Over! You lost.</p>}
       {win && <p>🎉 You Win! 🎉</p>}
-      {/* Display Restart button when game is over or won */}
       {(gameOver || win) && (
         <button onClick={handleRestart} style={{ marginTop: "20px" }}>
           Restart Game

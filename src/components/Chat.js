@@ -15,7 +15,7 @@ function Chat() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API_KEY = "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"; // Replace with your actual Groq API key
+  const API_KEY = "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";
   const API_URL = "https://api.groq.com/openai/v1/chat/completions";
   const MODEL_NAME = "llama-3.3-70b-versatile";
 
