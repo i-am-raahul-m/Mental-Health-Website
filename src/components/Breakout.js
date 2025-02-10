@@ -104,7 +104,6 @@ const Breakout = () => {
               dy = -dy;
               b.status = 0;
               score++;
-              // Check if all bricks are broken
               if (score === brickRowCount * brickColumnCount) {
                 gameWon = true;
                 setWin(true);
@@ -124,43 +123,36 @@ const Breakout = () => {
       drawScore();
       collisionDetection();
 
-      // If the game is won, stop updating the ball's position.
       if (gameWon) {
         return;
       }
 
-      // Wall collision detection
       if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
         dx = -dx;
       }
       if (y + dy < ballRadius) {
         dy = -dy;
       } else if (y + dy > canvas.height - ballRadius) {
-        // Paddle collision check
         if (x > paddleX && x < paddleX + paddleWidth) {
           dy = -dy;
         } else {
-          // Lose condition: ball missed the paddle.
           setGameOver(true);
           return;
         }
       }
 
-      // Update ball position
       x += dx;
       y += dy;
 
-      // Update paddle position based on key presses
       if (rightPressed && paddleX < canvas.width - paddleWidth) {
         paddleX += 7;
       } else if (leftPressed && paddleX > 0) {
         paddleX -= 7;
       }
 
-      // Increase the ball speed linearly by applying a constant acceleration.
       const currentSpeed = Math.sqrt(dx * dx + dy * dy);
       const angle = Math.atan2(dy, dx);
-      const acceleration = 0.001; // Adjust this value for desired acceleration
+      const acceleration = 0.001;
       const newSpeed = currentSpeed + acceleration;
       dx = newSpeed * Math.cos(angle);
       dy = newSpeed * Math.sin(angle);
@@ -189,10 +181,8 @@ const Breakout = () => {
     document.addEventListener("keydown", keyDownHandler);
     document.addEventListener("keyup", keyUpHandler);
 
-    // Game loop
     draw();
 
-    // Cleanup event listeners on unmount or restart
     return () => {
       document.removeEventListener("keydown", keyDownHandler);
       document.removeEventListener("keyup", keyUpHandler);

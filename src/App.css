@@ -1,4 +1,28 @@
-/* Global Styles */
+.home {
+  background: url('background_img.avif') no-repeat center;
+  padding: 50px;
+}
+
+.caption {
+  font-size: 2em;
+  color: #d11ae9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: fadeInUp 2s ease-out forwards;
+  margin: 20px 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;

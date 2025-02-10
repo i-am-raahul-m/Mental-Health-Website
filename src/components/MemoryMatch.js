@@ -9,7 +9,6 @@ const cardImages = [
   { id: 6, src: '/games/blackhole.webp', matched: false },
 ];
 
-// Duplicate and shuffle cards
 const shuffledCards = () => {
   const cards = [...cardImages, ...cardImages]
     .map(card => ({ ...card, id: Math.random() }))
@@ -26,7 +25,6 @@ function MemoryMatch() {
     if (flippedCards.length === 2) {
       const [first, second] = flippedCards;
       if (cards[first].src === cards[second].src) {
-        // Update cards to mark them as matched
         setCards(prevCards =>
           prevCards.map((card, index) => {
             if (index === first || index === second) {

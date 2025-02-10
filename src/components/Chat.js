@@ -82,7 +82,7 @@ function Chat() {
           .filter((msg) => msg.sender !== "system")
           .map((msg, index) => (
             <div key={index} className={`chat-message ${msg.sender}`}>
-              <strong>{msg.sender === "bot" ? "Support" : "You"}:</strong>{" "}
+              <strong>{msg.sender === "bot" ? "Solace" : "You"}:</strong>{" "}
               <span>{msg.text}</span>
             </div>
           ))}
