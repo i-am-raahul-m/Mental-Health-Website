@@ -5,17 +5,17 @@ function GuidedMeditation() {
     {
       title: 'Anxiety Control Meditation',
       duration: '10 min',
-      videoId: 'ez3GgRqhNvA' // Replace with actual YouTube video ID
+      videoId: 'ez3GgRqhNvA'
     },
     {
       title: 'Stress Relief Meditation',
       duration: '5 min',
-      videoId: 'L1QOh-n-eus' // Replace with actual YouTube video ID
+      videoId: 'L1QOh-n-eus'
     },
     {
       title: 'Breathing Meditation',
       duration: '10 min',
-      videoId: 'VUjiXcfKBn8' // Replace with actual YouTube video ID
+      videoId: 'VUjiXcfKBn8'
     }
   ];
 

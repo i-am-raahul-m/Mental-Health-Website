@@ -25,7 +25,6 @@ function App() {
             <Route path="/sleep" element={<Sleep />} />
             <Route path="/therapy" element={<Therapy />} />
             <Route path="/selfcare" element={<SelfCare />} />
-            <Route path="/" element={<SelfCare />} />
             <Route path="/memory-match" element={<MemoryMatch />} />
             <Route path="/breakout" element={<Breakout />} />
           </Routes>

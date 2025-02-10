@@ -4,7 +4,6 @@ function Music() {
   const genres = ['Classical', 'Lofi', 'Ambient', 'Nature'];
   const [selectedGenre, setSelectedGenre] = useState('Classical');
 
-  // Dummy playlists for demonstration purposes
   const playlists = {
     Classical: [
       { title: 'Keys of Moon', src: '/music/keys-of-moon.mp3' },
