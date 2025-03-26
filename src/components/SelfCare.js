@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const articles = [
   {
@@ -53,6 +53,7 @@ function SelfCare() {
     'Click below to get a gratitude challenge!'
   );
   const [gratitudeResponse, setGratitudeResponse] = useState('');
+  const navigate = useNavigate();
 
   const handlePlayGame = () => {
     setScore(score + Math.floor(Math.random() * 10) + 1);
@@ -70,17 +71,12 @@ function SelfCare() {
 
       <div className="minigames">
         <h3>Try These Stress-Relief Mini-Games</h3>
-        <ul>
-          <li>
-            <Link to="/bubble-wrap-pop">Bubble Wrap Pop</Link>
-          </li>
-          <li>
-            <Link to="/breakout">Atari Breakout</Link>
-          </li>
-          <li>
-            <Link to="/memory-match">Memory Match</Link>
-          </li>
-        </ul>
+        <button onClick={() => navigate('/breakout')}>
+          Atari Breakout
+        </button>
+        <button onClick={() => navigate('/memory-match')}>
+          Memory Match
+        </button>
       </div>
 
       <div className="self-care-tips">

@@ -19,6 +19,11 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/voice-to-text" activeclassname="active">
+            Voice Chat
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/guided-meditation" activeclassname="active">
             Guided Meditation
           </NavLink>
@@ -36,6 +41,11 @@ function Navbar() {
         <li>
           <NavLink to="/selfcare" activeclassname="active">
             Self-Care
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/forum" activeclassname="active">
+            Forum
           </NavLink>
         </li>
       </ul>

@@ -1,0 +1,127 @@
+.forum-container {
+    width: 50%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .post-form {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .post-input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    resize: none;
+    border-radius: 5px;
+  }
+  
+  .post-button {
+    align-self: flex-end;
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .feed {
+    margin-top: 20px;
+  }
+  
+  .post-card {
+    background: #fff;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.2s;
+  }
+  
+  .post-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .post-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .upvote-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .upvote-button {
+    background-color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .reply-button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    transition: 0.2s;
+  }
+  
+  .reply-button:hover {
+    background-color: #0d8bd1;
+  }
+  
+  /* Sliding Comments Section */
+  .comment-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 0;
+  }
+  
+  .comment-section.open {
+    max-height: 200px;
+    padding: 10px;
+  }
+  
+  .comment {
+    background: #e1e8ed;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 15px;
+    font-size: 0.9em;
+  }
+  
+  .comment-input {
+    width: 100%;
+    border: none;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 15px;
+    font-size: 1em;
+    background: #fff;
+    border: 1px solid #ccc;
+  }

@@ -4,20 +4,12 @@ import axios from "axios";
 function Chat() {
   const [messages, setMessages] = useState([
     {
-      sender: "system",
-      text: "You are a mental health support assistant. Respond empathetically and supportively. Be very respectful, considerate and use calming language. Respond to the point, do not give long einded messages."
-    },
-    {
       sender: "bot",
       text: "Hello, I am here to support you. How can I help today?"
     }
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-
-  const API_KEY = "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";
-  const API_URL = "https://api.groq.com/openai/v1/chat/completions";
-  const MODEL_NAME = "llama-3.3-70b-versatile";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,31 +22,13 @@ function Chat() {
     setLoading(true);
 
     try {
-      const response = await axios.post(
-        API_URL,
-        {
-          model: MODEL_NAME,
-          messages: updatedMessages.map((msg) => ({
-            role:
-              msg.sender === "user"
-                ? "user"
-                : msg.sender === "bot"
-                ? "assistant"
-                : "system",
-            content: msg.text
-          }))
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${API_KEY}`,
-            "Content-Type": "application/json"
-          }
-        }
-      );
+      const response = await axios.post("http://localhost:5002/chat", {
+        message: input
+      });
 
       const botMessage = {
         sender: "bot",
-        text: response.data.choices[0].message.content
+        text: response.data.response
       };
       setMessages([...updatedMessages, botMessage]);
     } catch (error) {
@@ -78,14 +52,12 @@ function Chat() {
     <div className="chat">
       <h2>Mental Health Support Chat</h2>
       <div className="chat-window">
-        {messages
-          .filter((msg) => msg.sender !== "system")
-          .map((msg, index) => (
-            <div key={index} className={`chat-message ${msg.sender}`}>
-              <strong>{msg.sender === "bot" ? "Solace" : "You"}:</strong>{" "}
-              <span>{msg.text}</span>
-            </div>
-          ))}
+        {messages.map((msg, index) => (
+          <div key={index} className={`chat-message ${msg.sender}`}>
+            <strong>{msg.sender === "bot" ? "Solace" : "You"}:</strong>{" "}
+            <span>{msg.text}</span>
+          </div>
+        ))}
         {loading && (
           <div className="loading">
             <span>Loading...</span>
