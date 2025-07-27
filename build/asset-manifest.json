@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Mental-Health-Website/static/css/main.4faa4435.css",
+    "main.js": "/Mental-Health-Website/static/js/main.95373823.js",
+    "index.html": "/Mental-Health-Website/index.html",
+    "main.4faa4435.css.map": "/Mental-Health-Website/static/css/main.4faa4435.css.map",
+    "main.95373823.js.map": "/Mental-Health-Website/static/js/main.95373823.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4faa4435.css",
+    "static/js/main.95373823.js"
+  ]
+}
