@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "axios": "^1.11.0",
     "framer-motion": "^12.6.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "react-scripts": "^5.0.1"
   },
-  "homepage": "https://i-am-raahul-m.github.io/Mental-Health-Website",
+  "homepage": "https://<your-username>.github.io/<your-repo-name>",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -30,8 +29,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
   }
 }
