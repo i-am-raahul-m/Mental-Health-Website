@@ -10,14 +10,11 @@
     "react-router-dom": "^6.0.0",
     "react-scripts": "^5.0.1"
   },
-  "homepage": "https://i-am-raahul-m.github.io/Mental-Health-Website",
+  "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "react-scripts test"
   },
   "browserslist": {
     "production": [
